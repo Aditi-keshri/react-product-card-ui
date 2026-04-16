@@ -30,6 +30,23 @@ select {
   padding: 48px 0;
 }
 
+.auth-page {
+  display: grid;
+  min-height: 100vh;
+  align-content: center;
+  justify-items: center;
+}
+
+.auth-page .intro {
+  text-align: center;
+}
+
+.auth-page h1,
+.auth-page .intro-copy {
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .intro {
   max-width: 720px;
   margin-bottom: 30px;
@@ -63,6 +80,109 @@ h1 {
   color: #555f61;
   font-size: 1.05rem;
   line-height: 1.6;
+}
+
+.auth-section {
+  width: min(100%, 520px);
+  margin-bottom: 30px;
+}
+
+.auth-form,
+.profile-panel {
+  display: grid;
+  gap: 16px;
+  max-width: 520px;
+  padding: 22px;
+  border: 1px solid #dce5e3;
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 16px 40px rgba(27, 27, 31, 0.08);
+}
+
+.profile-panel {
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.auth-heading h2,
+.profile-panel h2 {
+  margin-bottom: 6px;
+  font-size: 1.35rem;
+}
+
+.profile-panel p {
+  margin-bottom: 0;
+  color: #555f61;
+}
+
+.panel-label {
+  margin-bottom: 6px;
+  color: #0f766e;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+.auth-form label {
+  display: grid;
+  gap: 8px;
+  color: #374151;
+  font-weight: 800;
+}
+
+.auth-form input {
+  min-height: 44px;
+  width: 100%;
+  border: 1px solid #cfd9d7;
+  border-radius: 8px;
+  padding: 0 12px;
+  color: #1b1b1f;
+  background: #f9fbfa;
+}
+
+.auth-form input:focus {
+  outline: 3px solid #f9d949;
+  border-color: #0f766e;
+}
+
+.auth-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.auth-actions button,
+.profile-panel button {
+  min-height: 44px;
+  padding: 0 16px;
+  border: 0;
+  border-radius: 8px;
+  color: #ffffff;
+  background: #1f2937;
+  cursor: pointer;
+  font-weight: 800;
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.auth-actions button:hover,
+.profile-panel button:hover {
+  background: #0f766e;
+  transform: translateY(-2px);
+}
+
+.auth-actions .ghost-button {
+  border: 1px solid #cfd9d7;
+  color: #1f2937;
+  background: #ffffff;
+}
+
+.auth-actions .ghost-button:hover {
+  color: #ffffff;
+  border-color: #0f766e;
 }
 
 .product-grid {
@@ -191,6 +311,21 @@ h1 {
 
   .product-grid {
     gap: 16px;
+  }
+
+  .auth-form,
+  .profile-panel {
+    padding: 18px;
+  }
+
+  .profile-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-actions,
+  .auth-actions button,
+  .profile-panel button {
+    width: 100%;
   }
 
   .purchase-row {
